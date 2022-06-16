@@ -1,9 +1,11 @@
 import React,{useContext,useState,useEffect} from 'react'
 import { ListContext } from '../context/ConstextList';
+
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 export const ListTodo = () => {
-   const{list}= useContext(ListContext);
+  const TodoURL="http://localhost:3000/Todo";
+   const{list,setList}= useContext(ListContext);
    const [add,setAdd]= useState({id:uuidv4(),text:""});
    const Add=({target})=>{
     setAdd({
@@ -12,14 +14,19 @@ export const ListTodo = () => {
     })
     console.log("Funciona");
    }
-   const TodoURL="http://localhost:3000/Todo";
+
+   
    const AddText=async()=>{
     const resp =  await axios.post(TodoURL,add)
    }
    const handleDelete = text => {
     axios.delete(`${TodoURL}/${text.id}`)
-    setAdd();
+    const newList=list.filter((item)=>{
+      return item.id !==text.id
+    })
+    setList(newList)
     };
+
   
   return (
     <div>
