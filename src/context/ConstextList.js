@@ -20,7 +20,7 @@ export const ConstextListProvider = ({children}) => {
         fetchListDone();
     },[])
   return (
-    <ListContext.Provider value={{list,listDone} }>
+    <ListContext.Provider value={{list,listDone,setList,setListDone} }>
         {children}
     </ListContext.Provider>
   )
