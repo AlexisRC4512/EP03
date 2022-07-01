@@ -9,7 +9,7 @@ export const ConstextListProvider = ({children}) => {
     const [listDone,setListDone]= useState([]);
     const fetchList = useFetch(TodoURL, (response) => {
         setList(response);
-        console.log(response)
+        console.log(response);
     });
     const fetchListDone = useFetch(DoneURL, (response) => {
         setListDone(response);
@@ -20,7 +20,7 @@ export const ConstextListProvider = ({children}) => {
         fetchListDone();
     },[])
   return (
-    <ListContext.Provider value={{list,listDone,setList,setListDone} }>
+    <ListContext.Provider value={{list,listDone,setList,setListDone}}>
         {children}
     </ListContext.Provider>
   )

@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+.table{
+  border-radius: 10px;
+  background-color: white;
+  opacity: 50;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cabecera{
+  width: 1297px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: underline;
+  
+}
+body{
+  background: url(/fondo-abstracto-superficie-madera-color-marron-oscuro-vista-superior-primer-plano-obras-arte-foto-alta-calidad_414617-703\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.tareas{
+  color: white;
+  text-decoration: underline;
+}
+
+.title{
+  color: white;
+  text-decoration: underline;
+}
+
+.col-45{
+  text-decoration: line-through;
+  color:red;
+  height: 45px;
+  padding-top: 10px;
+  font-size: larger;
+}
+.col-4{
+  font-size: larger;
+}
+
+@media screen {
+  .cabecera{
+    justify-content: center;
+    align-items: center;
+    
+    width: auto;
+  }
+}

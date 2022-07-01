@@ -1,33 +1,22 @@
 {
   "Todo": [
     {
-      "id": "f1",
-      "text": "I'm process2... xd"
+      "id": "6ff27e6d-c18f-40c6-947b-d83004515374",
+      "text": "comprar pan "
     },
     {
-      "id": "6c78d196-ad72-498a-bcd2-7fc6084f4734",
-      "text": "hola"
-    },
-    {
-      "id": "2837f62d-ca68-438a-a10c-dfbd23bf73cc",
-      "text": "ssdfsdf"
-    },
-    {
-      "id": "9cc32c4a-4760-47c8-8169-4d92f10105af",
-      "text": "holaAlexos"
-    },
-    {
-      "id": "dca04745-63e9-425c-b555-f638d76f1ba4",
-      "text": "asdasdasd"
-    },
-    {
-      "id": "36beaa3e-792c-468d-a2b6-97b9c11e4048",
-      "text": "asdsad"
+      "id": "29ee88b2-eda1-42c8-a25a-ae21b2497d07",
+      "text": "jugar play"
     }
   ],
   "Done": [
     {
-      "id": "f1"
+      "id": "c73536ba-3d66-48c9-9e5f-053b25f22903",
+      "text": "Dormir mis 10 horas como siempre"
+    },
+    {
+      "id": "5584ebc1-5859-4423-81df-f39d81cae10d",
+      "text": "Hacer compras a media noche *guiño guiño*"
     }
   ]
 }

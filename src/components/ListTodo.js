@@ -20,10 +20,12 @@ export const ListTodo = () => {
     const resp =  await axios.post(TodoURL,add)
    }
    const newData =(()=>{
+    
     axios.get(DoneURL).then(res => {
       const persons = res;
       setListDone(persons.data)
       console.log(persons.data)
+      
    })
     
    }) 
@@ -50,24 +52,25 @@ export const ListTodo = () => {
  
   return (
     <div>
-      <h1>Todo</h1>
+      <div className='cabecera'>
+      <h1 className='title'>To do List</h1>
          <form onSubmit={AddText}>
-            <input type="text" name="text" onChange={Add} />
-
-          <button type="submit">Add</button>
+            <input placeholder='Añada aqui su tarea' type="text" name="text" onChange={Add} />
+          <button type="submit">➕</button>
         </form>
-       
-               {list.map((lis)=>{
+        <h1 className='title'>Tareas Por Realizar</h1>
+        </div>  
+               {list.map((lis,loading)=>{
             return(
                 <div key={uuidv4()} className="container">
                       <table className="table table-striped">
                             <tr className='col-12'>
-                              <td className='col-4'>{lis.text}</td>
-                              <td className='col-3'><button type="button" onClick={()=>handleDelete(lis)} className="btn btn-outline-danger">remove</button></td>
-                              <td className='col-3'><button type="button" onClick={()=>handleDone(lis)} className="btn btn-outline-success">chek</button></td>
+                            <td className='col-2'><button type="button" onClick={() => handleDone(lis)} className="btn btn-outline-success">✔️</button></td>
+                            <td className='col-4'>{lis.text}</td>
+                            <td className='col-3'><button type="button" onClick={() => handleDelete(lis)} className="btn btn-outline-warning">✏️</button>
+                            <button type="button" onClick={() => handleDelete(lis)} className="btn btn-outline-danger">🗑️</button></td>
                             </tr>
                       </table>
-                    
                 </div>
             )
 })

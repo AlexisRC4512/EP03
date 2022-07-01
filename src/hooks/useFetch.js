@@ -1,6 +1,7 @@
 export const useFetch = (url, callback) => {
 
     return async ()=>{
+       
         try {
             const data = await fetch(url);
             const json = await data.json();
@@ -8,5 +9,6 @@ export const useFetch = (url, callback) => {
         } catch (err) {
             console.error(err);
         }
+    
     }
 }
